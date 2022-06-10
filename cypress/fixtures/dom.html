@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf8" />
+    <title>Offset</title>
+    <style>
+      #outer {
+        position: relative;
+        border: 1px solid greenyellow;
+        width: 100px;
+        height: 100px;
+      }
+      #content {
+        position: absolute;
+        border: 1px solid yellow;
+      }
+      #inner {
+        position: relative;
+        border: 1px solid black;
+      }
+      #inner-content {
+        border: 1px solid red;
+        position: absolute;
+        top: 20px;
+      }
+      .border-box {
+        box-sizing: border-box;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="outer" class="border-box">
+      <div id="content" class="border-box">
+        <div id="inner" class="border-box">
+          <div id="inner-content" class="border-box">test</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
